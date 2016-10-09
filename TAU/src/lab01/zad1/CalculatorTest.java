@@ -26,7 +26,11 @@ public class CalculatorTest {
 	@Test
 	public void calculatorTestGreater(){
 		assertTrue(calculator.greater(3, 2));
-		
+	}
+	
+	@Test(expected = ArithmeticException.class)
+	public void testDivideZero() {
+		calculator.div(10, 0);
 	}
 	
 	
